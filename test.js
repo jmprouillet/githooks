@@ -14,13 +14,6 @@ app.get('/', function(req,res){
 	exec('cd ' + repo + ' && git pull');
 });
 
-app.post('/payload', function(req,res){
-	console.log('hitting payload');
-    var data = req.body;
-    console.log("got a GitHub payload \n"+JSON.stringify(data));
-    res.status(200);
-    res.send();
-});
 // this calls a git pull
 app.post('/update', function(req,res){
 	console.log('got something');
